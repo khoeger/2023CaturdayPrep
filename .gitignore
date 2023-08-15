@@ -1,3 +1,5 @@
 demos
 bpmViaOscToProcessing/animations
 .DS_Store
+*.png
+*.mp4
