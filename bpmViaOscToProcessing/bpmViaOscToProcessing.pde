@@ -32,9 +32,9 @@ String startTimestamp;
 
 void setup() {
 
-  background(255);
+  background(0);
 
-  size(800, 800);
+  size(800, 1000);
   frameRate(100);
 
   colorMode(HSB, 360, 100, 100, 1.0);
@@ -49,47 +49,34 @@ void setup() {
 
 void draw() {
 
-  //background(255, 255, 255, 5);
-
-  if ( millis() - drawStartTime < 30500 ) {
+  //if ( millis() - drawStartTime < 30500 ) {
     if (drawNow == true) {
 
       println(millis() - drawStartTime < 30500, millis() - drawStartTime );
       int rad = int(map(bpm, 40, 800, 150, 10));
 
-      stroke(int(random(50, 240)),
+      fill(int(random(50, 240)),
         int(random(10, 75)),
         int(random(25, 75)),
         map(rad, 10, 150, 1.0, 0.05));
-      strokeWeight(2);
-      noFill();
-      //rad = abs(160 - rad);
-      //println(rad, 160- rad);
+      //strokeWeight(2);
+      //noFill();
+      noStroke();
       ellipse( random(100, width-100), random(100, height-100), rad, rad);
 
       drawNow = !drawNow;
 
-      saveFrame("animations/dotDemo/"+startTimestamp+"/#####.png");
-    } else {
-      saveFrame("animations/dotDemo/"+startTimestamp+"/#####.png");
-
-      /* send the message */
-      //OscMessage myMessage = new OscMessage("/end draw shapes");
-      //oscP5.send(myMessage, myRemoteLocation);
-      //drawStartTime = Integer.MAX_VALUE;
-    }
+      //saveFrame("animations/dotDemo/"+startTimestamp+"/#####.png");
+    //} else {
+    //  saveFrame("animations/dotDemo/"+startTimestamp+"/#####.png");
+    //}
   }
 }
 
 void initOsc() {
   oscP5 = new OscP5(this, 12000);
   myRemoteLocation = new NetAddress("10.0.0.7", 8080);
-  //oscP5.plug(this, "foo", "/foo");
 }
-
-//public void foo(int value) {
-//  println("int received! =" + value);
-//}
 
 
 void mousePressed() {
@@ -102,7 +89,7 @@ void mousePressed() {
   oscP5.send(myMessage, myRemoteLocation);
 
   drawStartTime = millis();
-  background(240, 0, 100, 1);
+  background(240, 0, 0, 1); // white, change third entry 100
 }
 
 /* incoming osc message are forwarded to the oscEvent method. */
