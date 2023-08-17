@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 79.0, 743.0, 734.0 ],
+		"rect" : [ 34.0, 79.0, 783.0, 734.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -155,7 +155,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 203.0, 1096.0, 50.0, 22.0 ],
-					"text" : "536."
+					"text" : "102."
 				}
 
 			}
@@ -553,7 +553,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 111.0, 695.0, 63.5, 22.0 ],
-					"text" : "536."
+					"text" : "102."
 				}
 
 			}
@@ -563,8 +563,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 265.0, 1145.0, 138.0, 22.0 ],
-					"text" : "udpsend 10.0.0.7 12000"
+					"patching_rect" : [ 265.0, 1145.0, 145.0, 22.0 ],
+					"text" : "udpsend 10.0.0.12 12000"
 				}
 
 			}
@@ -586,7 +586,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 702.0, 128.0, 148.0, 33.0 ],
+					"patching_rect" : [ 702.0, 128.0, 149.0, 33.0 ],
 					"text" : "set the host by ip address & hostname"
 				}
 
@@ -830,7 +830,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 138.0, 574.0, 106.5, 22.0 ],
-					"text" : "111.940299"
+					"text" : "588.235294"
 				}
 
 			}
