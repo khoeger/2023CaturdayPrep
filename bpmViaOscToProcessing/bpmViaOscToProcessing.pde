@@ -34,7 +34,8 @@ void setup() {
 
   background(0);
 
-  size(800, 1000);
+  //size( 950, 1000);
+  fullScreen();
   frameRate(100);
 
   colorMode(HSB, 360, 100, 100, 1.0);
@@ -52,7 +53,7 @@ void draw() {
   //if ( millis() - drawStartTime < 30500 ) {
     if (drawNow == true) {
 
-      println(millis() - drawStartTime < 30500, millis() - drawStartTime );
+      //println(millis() - drawStartTime < 30500, millis() - drawStartTime );
       int rad = int(map(bpm, 40, 800, 150, 10));
 
       fill(int(random(50, 240)),
@@ -74,13 +75,16 @@ void draw() {
 }
 
 void initOsc() {
-  oscP5 = new OscP5("10.0.0.12", 12000); // home network
+  oscP5 = new OscP5(this, 12000); // home network
+
+  //oscP5 = new OscP5("10.0.0.12", 12000); // home network
  // oscP5 = new OscP5("192.168.64.189", 12000); // phone
   //oscP5 = new OscP5("169.254.226.33", 12000); //  ethernet
   
   //myRemoteLocation = new NetAddress("192.68.64.52", 8080); // phone
-  myRemoteLocation = new NetAddress("10.0.0.7", 8080); // home network
+  //myRemoteLocation = new NetAddress("10.0.0.7", 8080); // home network
   //myRemoteLocation = new NetAddress("169.254.9.77", 8080); // ethernet
+  myRemoteLocation = new NetAddress("10.0.0.12", 8080); // home network
 
 }
 
@@ -104,10 +108,10 @@ void oscEvent(OscMessage theOscMessage) {
   //print("### received an osc message.");
   //print(" addrpattern: "+theOscMessage.addrPattern());
   //print(" typetag: "+theOscMessage.typetag());
-  println(" value: "+ str(theOscMessage.get(0).floatValue()));
+  //println(" value: "+ str(theOscMessage.get(0).floatValue()));
 
   bpm = theOscMessage.get(0).floatValue();
 
   drawNow = !drawNow;
-  println("drawNow = ",drawNow);
+  //println("drawNow = ",drawNow);
 }
