@@ -124,7 +124,7 @@ void oscEvent(OscMessage theOscMessage) {
   /* Message Triggers following changes */
   drawNow = !drawNow;
   shapeA = new ShapeObject( shapeFloat, diff);
-  println(shapeFloat, bpm, diff, drawNow);
+  println(shapeFloat,diff);
 }
 
 class ShapeObject {
