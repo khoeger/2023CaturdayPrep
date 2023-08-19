@@ -5,3 +5,5 @@ bpmViaOscToProcessing/inputImages
 *.png
 *.mp4
 sounds/*
+loadMultipleImages_Test/animations
+loadMultipleImages_Test/inputImages
