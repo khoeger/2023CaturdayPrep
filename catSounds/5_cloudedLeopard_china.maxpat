@@ -440,43 +440,6 @@
 					"basictuning" : 440,
 					"data" : 					{
 						"clips" : [ 							{
-								"absolutepath" : "C:/Users/katar/OneDrive/Documents/Projects/livecoding/2023CaturdayPrep/sounds/edits/1_A7_3.wav",
-								"filename" : "1_A7_3.wav",
-								"filekind" : "audiofile",
-								"id" : "u478001632",
-								"selection" : [ 0.0, 1.0 ],
-								"loop" : 0,
-								"content_state" : 								{
-									"loop" : 0
-								}
-
-							}
- ]
-					}
-,
-					"followglobaltempo" : 0,
-					"formantcorrection" : 0,
-					"id" : "obj-11",
-					"maxclass" : "playlist~",
-					"mode" : "basic",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"originallength" : [ 0.0, "ticks" ],
-					"originaltempo" : 120.0,
-					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 736.0, 795.0, 150.0, 30.0 ],
-					"pitchcorrection" : 0,
-					"quality" : "basic",
-					"timestretch" : [ 0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"basictuning" : 440,
-					"data" : 					{
-						"clips" : [ 							{
 								"absolutepath" : "C:/Users/katar/OneDrive/Documents/Projects/livecoding/2023CaturdayPrep/sounds/edits/1_A5_5.wav",
 								"filename" : "1_A5_5.wav",
 								"filekind" : "audiofile",
@@ -561,24 +524,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 1 ],
-					"midpoints" : [ 745.5, 870.0, 225.5, 870.0 ],
-					"order" : 0,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"midpoints" : [ 745.5, 870.0, 108.5, 870.0 ],
-					"order" : 1,
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 1 ],
 					"midpoints" : [ 260.5, 870.0, 225.5, 870.0 ],
@@ -942,13 +887,6 @@
 			}
 , 			{
 				"name" : "1_A5_5.wav",
-				"bootpath" : "~/OneDrive/Documents/Projects/livecoding/2023CaturdayPrep/sounds/edits",
-				"patcherrelativepath" : "../sounds/edits",
-				"type" : "WAVE",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "1_A7_3.wav",
 				"bootpath" : "~/OneDrive/Documents/Projects/livecoding/2023CaturdayPrep/sounds/edits",
 				"patcherrelativepath" : "../sounds/edits",
 				"type" : "WAVE",
